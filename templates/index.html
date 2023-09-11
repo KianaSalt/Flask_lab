@@ -14,6 +14,9 @@
         {% extends "template.html" %}
         {% block content %}
         <h1> Flask App </h1>
+        <p> This is a simple home page for my flask app</p>
+        <p>{{datum.day}}/{{datum.month}}/{{datum.year}}</p>
+        <img src="{{datum.img}}" />
         {% endblock %}
 
         <!-- Optional JavaScript; choose one of the two! -->
