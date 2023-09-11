@@ -12,12 +12,12 @@ def home():                               # method called home
  
 @app.route("/<name>")              # route with URL variable /<name>
 def hello_name(name):              # call method hello_name
-    #name = "Kiana"
     return "Hello "+ name          # which returns "hello + name
 
 @app.route("/about")           # About page 
 def about():
     name = request.args.get('name') if request.args.get('name') else "Hello World!"      #we are taking 'name' from the request args (approute name) and assigning it to a variable named name
+    name = "Kiana"
     return render_template("about.html", aboutName=name)     #passing name as a variable called aboutName to the about template.
 
 
